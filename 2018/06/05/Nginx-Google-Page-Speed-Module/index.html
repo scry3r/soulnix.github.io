@@ -10,7 +10,7 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
   
-      <title>Search - My Pirate Way</title>
+      <title>Nginx Google Page Speed Module - My Pirate Way</title>
   
 
   
@@ -129,6 +129,17 @@ crossorigin="anonymous"></script>
 		
 	
 	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
 	<div class='nav-item' id='nav-item-archive'>
 		
 				<div class='nav-icon'>
@@ -140,7 +151,7 @@ crossorigin="anonymous"></script>
 	</div>
 	<div class='nav-item' id='nav-item-search'>
 		
-		<div class='nav-icon active_dot'>
+		<div class='nav-icon'>
 		
 			<a href="/search/" title='Search'>
 			<img src="/images/icons/colorful-outlined/search.svg" alt="">
@@ -189,95 +200,180 @@ crossorigin="anonymous"></script>
 
  
 
+  
+
 
 
 
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div style="flex: 1;">
-      <div class='search-container'>
-	<input type="text" id='search-form'>
+      <style>
+    body {
+        background-color: white;
+    }
+</style>
 
-	<ul class="cat-list">
-		
-	</ul>
 
-	<div class="archive-cards">
-			<div class='Card-archive' style='display:none'>
-				<div class="Card-body">
-					<h3 class='Card-title'>
-						<a>
-						</a>
-					</h3>
-					<div class="Card-meta">
-						<ul>
-							<li><i class='fa fa-calendar'></i> <span class='Card-date'></span></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
+
+
+
+
+
+
+    
+    
+
+
+
+
+
+
+    
+    
+        
+    
+
+    
+        
+    
+
+
+
+
+
+
+
+
+
+<article class="article" id="/2018/06/05/Nginx-Google-Page-Speed-Module/" data-name='Nginx Google Page Speed Module' data-version="">
+
+    <!-- Title -->
+    <div class='article-header'>
+         
+         <h1 class='article-title'>
+            <a href="/2018/06/05/Nginx-Google-Page-Speed-Module/">
+                Nginx Google Page Speed Module
+            </a>
+        </h1>
+        <!-- TODO: support nested categories,display them nicely -->
+        
+    </div>
+    
+    <!-- Date and Author -->
+    <div class='article-meta'>
+    <ul>
+            <li><i class='fa fa-calendar'></i> 2018-06-05</li>
+            
+            <li><i class="fa fa-user"></i> Max 'soulnix'</li>
+            <li><i class="fas fa-copyright"></i>
+            
+                
+                
+            
+            
+                <a href=https://creativecommons.org/licenses/by-nc-nd/4.0/>CC BY-NC-ND 4.0</a>
+            
+            </li>
+    </ul>
+    
+    </div>
+    <div class='article-cards'>
+        <!-- Author Card -->
+        <!---
+        <div class='Card-article Card-author'>
+            <div class='card-title'>
+                <h3></h3>
+            </div>
+            <div class='card-content'>
+                    <div class="author-meta">
+                            <div class='author-figure'>
+                                <img src="" alt="">
+                            </div>
+                            <div class='author-name'>
+                                Max 'soulnix'
+                            </div>
+                        </div>
+                        <div class="author-ai">
+                            <div class='author-intro'>
+                                <!-- TODO: auto generating author description -->
+                                <!-- 
+                            </div>
+                            <div class="author-articles">
+                                <!-- TODO: auto generating author articles -->
+                                <!-- <ul>
+                                    <li>Article 1</li>
+                                    <li>Article 2</li>
+                                    <li>Article 3</li>
+                                    <li>Article 4</li>
+                                    <li>Article 5</li>
+                                    <li>Article 6</li>
+                                </ul>
+                            </div>
+                        </div>
+            </div>
+            
+        </div> -->
+
+        <!-- Visit Card -->
+        <!-- <div class="Card-article Card-visit"> -->
+            <!-- <div class="card-title">
+  <h3>Post Visit</h3>
+</div>
+<div class="card-chart">
+  <div id='chart-post-visit'></div>
+</div> -->
+        <!-- </div> -->
+        
+        <!-- Auto Excerpt Card -->
+        <!-- <div class="Card-article Card-excerpt">
+            <div class="card-title">
+  <h3>Quick Read</h3>
+</div>
+<div class="card-text">
+  <p id='text-post-summary'></p>
+</div>
+        </div> -->
+    </div>
+    
+    <!-- Gallery -->
+    <!-- TODO: add a slider to gallery -->
+    
+
+    <!-- Content -->
+    <!-- TODO: support table of content -->
+    <div class="article-toc" id='article-toc'>
+        
+
+
+
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
 </div>
 
-<script src="/libs/fuse.js/dist/fuse.min.js"></script>
-<script>
-	var options = {
-		shouldSort: true,
-		threshold: 0.4,
-		tokenize: true,
-		location: 0,
-		distance: 100,
-		maxPatternLength: 32,
-		minMatchCharLength: 2,
-		keys: [
-			"title",
-			"author",
-			"tags"
-		]
-	};
-	var s = '[{"title":"Nginx Google Page Speed Module","date":"2018-06-05T13:13:27.000Z","content":"","tags":[],"path":"2018/06/05/Nginx-Google-Page-Speed-Module/","external_link":""},{"title":"Hello World","date":"2018-06-05T01:09:18.023Z","content":"Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.\nQuick Start\nCreate a new post\n1$ hexo new My New Post\nMore info: Writing\nRun server\n1$ hexo server\nMore info: Server\nGenerate static files\n1$ hexo generate\nMore info: Generating\nDeploy to remote sites\n1$ hexo deploy\nMore info: Deployment\n","tags":[],"path":"2018/06/05/hello-world/","external_link":""}]';
-	s = s.replace(/\\n/g, "\\n")
-               .replace(/\\'/g, "\\'")
-               .replace(/\\"/g, '\\"')
-               .replace(/\\&/g, "\\&")
-               .replace(/\\r/g, "\\r")
-               .replace(/\\t/g, "\\t")
-               .replace(/\\b/g, "\\b")
-               .replace(/\\f/g, "\\f")
-// remove non-printable and other non-valid JSON chars
-	s = s.replace(/[\u0000-\u0019]+/g,"");
-	var list = JSON.parse(s);
-	var fuse = new Fuse(list, options);
-	var el = document.getElementById('search-form');
-	var newBox = $('.Card-archive').first().clone();
-	el.oninput = function(event){
-		var searchText = el.value;
-		var result = fuse.search(searchText);
-		$('.archive-cards .Card-archive').remove();
-		for(var i in result){
-			var anotherBox = newBox.clone();
-			var dateStr = new Date(result[i].date);
-			anotherBox.css('display','flex');
-			var url = "";
-			if(result[i].external_link !== ""){
-				url = result[i].external_link;
-			}else{
-				url = '/' + result[i].path;
-			}
+    </div>
+    <div class='article-content'>
+    No content
+    
+    </div>
+    
+    
+        <div class="article-comment" id='article-comment'>
+            
 
-			anotherBox.find('.Card-title a').text(result[i].title).attr('href', url);
-			anotherBox.find('.Card-date').text(dateStr.toDateString());
-			anotherBox.appendTo('.archive-cards');
-		}
-	}
-</script>
+<h1>Comment</h1>
 
-<div class='tagcloud-container'>
-<div class='tag-cloud'>
-	
-</div>
-</div>
+  
+    <div id="comment-not-available">
+      Not available
+      <p><strong>For site maintainer: </strong>Please provide <code>shortname</code> in your <code>_data/cutie.yml</code> file for <code>disqus</code> comment system.</p>
+    </div>
+  
 
+
+        </div>
+        
+</article>
   </div>
 
   
@@ -336,6 +432,17 @@ crossorigin="anonymous"></script>
 		
 	
 	
+	<div class='nav-item' id='nav-item-toc'>
+		
+
+
+
+<div class="toc-button" onclick='toggleTOC(event);' ontouchstart='toggleTOC(event);'>
+    <img src="/images/icons/colorful-outlined/toc.svg" alt="">
+</div>
+
+	</div>
+	
 	<div class='nav-item' id='nav-item-archive'>
 		
 				<div class='nav-icon'>
@@ -347,7 +454,7 @@ crossorigin="anonymous"></script>
 	</div>
 	<div class='nav-item' id='nav-item-search'>
 		
-		<div class='nav-icon active_dot'>
+		<div class='nav-icon'>
 		
 			<a href="/search/" title='Search'>
 			<img src="/images/icons/colorful-outlined/search.svg" alt="">
@@ -428,6 +535,13 @@ crossorigin="anonymous"></script>
 <script type='text/javascript'>
 
   
+  // update cookie if this page is opened (directly)
+  loadjs(['/libs/jshashes/hashes.min.js', '/libs/js-cookie/src/js.cookie.js', '/js/post.v2.js'], 'post-version');
+  loadjs.ready('post-version', function(){
+    
+    new Postv2('hashit_62336a1601873f8d54b23338c981fdc44817f6c1f80b096057ed53cc13dcc8ad').update('hashit_e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855', function(){});
+  });
+  
 </script>
 
 
@@ -441,6 +555,16 @@ crossorigin="anonymous"></script>
 initHeadroom();
 
 changeLayoutOnTouchScreen();
+
+// 
+// var post = new Post('', '');
+// post.getCommentCount(window.location.pathname, function(count){
+//     $('#article-comment-count').text(count);
+// });
+// post.addVisitRecord(window.location.pathname, userip);
+// post.getVisitCount(window.location.pathname, function(count){
+//     $('#article-visit-count').text(count);
+// });
 
 // 
 </script>
